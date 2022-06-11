@@ -96,12 +96,14 @@ form {
 
 #result {
     font-family: "Muli-Regular";
-    color: #5e38c5;
-    left: 580px;
-    bottom: 80px;
+    color: #cde2e0;
     font-size: 26px;
     position: fixed;
-    font-weight: 300;
+    font-weight: 900;
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    bottom:100;
 }
 
 .btn{
