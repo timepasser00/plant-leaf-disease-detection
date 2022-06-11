@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Plant Leaf Disease Detector</title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../static/style.css">
+	<!-- <link rel="icon" href="../static/leaf.png" type="image/x-icon"> -->
+</head>
+
+<body>
+	<section class="bg"></section>
+	<div class="container">
+		<!-- <img src="../static/bgd.jpg" class="bgd" id="right"></div> -->
+		<div class="heading">
+			Plant leaf Disease Detector
+		</div>
+		<div class="text">
+			<p><b>
+				Share a picture of the Infected plant Leaf and get immediate result
+			</b></p>
+		</div>
+		<div class="inner">
+			<form id="analysis-form" action="/result" method="POST" enctype = "multipart/form-data">
+				<div class="imgbox">
+					<img src="../static/img.jpg" class="img" id="selected_image">
+					<!-- <label for="fname">Image of Infected Plant</label><br> -->
+					<div class="add"><span>SELECT IMAGE</span></div>
+					<input class = "ip" name="fname" onchange="displayFile(this)" type="file" id="fname" accept="image/png, image/jpeg"><br>
+				</div>
+				<div>
+					<img id="preview-image">
+				</div>
+				<button class = "btn" id = "analyze-button" type="submit">
+					<span>Analyze</span>
+				</button>
+			</form>
+			<div id="result"><b>Result</b>: {{data}}</div>
+		</div>
+		<!--  -->
+		<script src="../static/client.js"></script>
+	</div>
+
+</body>
+  
+</html>
