@@ -20,27 +20,20 @@ predictor = CustomVisionPredictionClient(ENDPOINT, prediction_credentials)
 publish_iteration_name = "Iteration1"
 project_id = "30b4cc24-cf83-42f8-b87f-b36086ec6051"
 
-# with open(os.path.join ("C:/Users/atul0/projects/webDev/azure_project/test_image.jpg"), "rb") as test_data:
-#     results = predictor.classify_image(
-#         project_id, publish_iteration_name, test_data)
 
-#     # Display the results.
-#     for prediction in results.predictions:
-#         print("\t" + prediction.tag_name +
-#               ": {0:.2f}%".format(prediction.probability * 100))
 def predict(image):
     test_data = image
     results = predictor.classify_image(project_id, publish_iteration_name, test_data)
     for prediction in results.predictions:
             if(prediction.tag_name == "Apple_healthy" and prediction.probability > 0.5):
-                return "Healthy_Apple"
+                return "Healthy"
             elif(prediction.tag_name == "Apple_scab" and prediction.probability > 0.5):
-                return "Apple_scab"
+                return "Apple scab"
             elif(prediction.tag_name == "Grape_healthy" and prediction.probability > 0.5):
-                return "Grape_healthy"
+                return "healthy"
             elif(prediction.tag_name == "Grape_blackRot" and prediction.probability > 0.5):
-                return "Grape_blackRot"
+                return "Grape blackRot"
             elif(prediction.tag_name == "Corn_healthy" and prediction.probability > 0.5):
-                return "Corn_healthy"
+                return "healthy"
             elif(prediction.tag_name == "Corn_commonRust" and prediction.probability > 0.5):
-                return "Corn_commonRust"
+                return "Corn commonRust"
