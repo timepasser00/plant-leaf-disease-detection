@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'leafdiseasepredictor'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17231C6AA58E4BB6B962A9428B30AC2C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF73B80C2A2E411A9D9CEBB0763AA4B4 }}
           package: .
